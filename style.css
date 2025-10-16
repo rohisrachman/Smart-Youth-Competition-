@@ -1,0 +1,351 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* --- SCOREBOARD UTAMA --- */
+#scoreboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.team-card {
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.team-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* REVISI: Skor lebih besar dan warna biru */
+.team-score {
+    font-size: 4em;
+    font-weight: 900;
+    color: #007bff; 
+    margin-bottom: 15px;
+}
+/* Peringkat Shape dan Gradasi Warna */
+.team-rank {
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px; 
+    display: inline-block;
+}
+.rank-1 { background-color: #00BFFF; } /* Biru Cerah */
+.rank-2 { background-color: #1E90FF; }
+.rank-3 { background-color: #4169E1; }
+.rank-4 { background-color: #0000CD; } /* Biru Sedang/Gelap */
+
+
+/* --- PANEL KONTROL OPERASIONAL --- */
+.controls {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+.controls h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* REVISI: Tata letak bersampingan untuk kontrol poin dan tombol tim */
+#control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+.universal-controls-group {
+    display: flex;
+    flex-direction: column;
+    width: 30%; 
+    min-width: 250px;
+}
+.team-control-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 tim per baris */
+    gap: 15px;
+    width: 70%; 
+}
+
+/* Gaya Input Poin Universal */
+.universal-control {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    text-align: center;
+    background: #ffffff;
+}
+.universal-control label {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.universal-control.minus-input label {
+    color: #dc3545; /* Merah untuk Minus */
+}
+.universal-control:not(.minus-input) label {
+    color: #28a745; /* Hijau untuk Plus (Pembeda dari Biru Utama) */
+}
+.score-input {
+    width: 90%;
+    padding: 8px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Gaya Tombol Tim */
+.team-control-button {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    text-align: center;
+}
+.team-control-button label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #495057;
+}
+.add-btn, .subtract-btn {
+    padding: 8px 12px;
+    margin: 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+    width: 45%;
+}
+/* REVISI: Warna tombol */
+.add-btn {
+    background-color: #007bff; /* Biru */
+    color: white;
+}
+.subtract-btn {
+    background-color: #dc3545; /* Merah */
+    color: white;
+}
+.add-btn:hover { background-color: #0056b3; }
+.subtract-btn:hover { background-color: #c82333; }
+
+/* --- Bagian Nama Tim (tetap sama) --- */
+.name-input-section {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px dashed #007bff;
+    text-align: center;
+}
+.name-input-item {
+    border: none !important;
+}
+.name-input-item input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.name-input-section button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* --- Bagian Download dan History (tetap sama) --- */
+.download-btn {
+    display: block;
+    width: 60%;
+    margin: 15px auto 0;
+    padding: 12px;
+    background-color: #28a745; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.history-section {
+    margin-top: 30px;
+    padding: 15px;
+    background: #fff3cd; 
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+}
+#score-history {
+    list-style-type: none;
+    padding: 0;
+}
+#score-history li {
+    background: #ffffff;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+    font-family: monospace;
+}
+#score-history li:last-child {
+    font-weight: bold;
+    color: #dc3545; 
+}
+/* Responsif */
+@media (max-width: 800px) {
+    #control-panel {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+    .universal-controls-group {
+        width: 100%;
+        min-width: unset;
+        flex-direction: row; 
+        gap: 10px;
+    }
+    .universal-control {
+        width: 50%;
+    }
+    .team-control-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    #scoreboard {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+.controls.universal-controls-only {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #ced4da;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.controls.universal-controls-only h2 {
+    color: #007bff;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#universal-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* GAYA KOTAK UTAMA UNIVERSAL BARU */
+.universal-control {
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+/* KOTAK BIRU: SET POIN BENAR (PLUS) */
+.universal-control.plus-input {
+    border: 2px solid #007bff; /* Border Biru */
+    background: #e9f5ff; /* Background Biru Muda */
+}
+
+/* KOTAK MERAH: SET POIN SALAH (MINUS) */
+.universal-control.minus-input {
+    border: 2px solid #dc3545; /* Border Merah */
+    background: #f8e9e9; /* Background Merah Muda */
+}
+
+/* Efek Hover */
+.universal-control.plus-input:hover {
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    transform: translateY(-2px);
+}
+.universal-control.minus-input:hover {
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+    transform: translateY(-2px);
+}
+
+
+/* Warna Label */
+.universal-control.minus-input label {
+    color: #dc3545; /* Merah untuk Minus */
+}
+.universal-control.plus-input label {
+    color: #007bff; /* Hijau untuk Plus */
+}
+
+/* Gaya Input Angka */
+.score-input {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 10px;
+    margin: 5px 0 0 0;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 900;
+}
+
+/* Warna Border Input Angka di dalam Kotak */
+.universal-control.plus-input .score-input {
+    border: 3px solid #007bff; /* Border input angka Biru */
+    color: #007bff;
+}
+
+.universal-control.minus-input .score-input {
+    border: 3px solid #dc3545; /* Border input angka Merah */
+    color: #dc3545;
+}
+
+/* --- Media Query untuk Responsif (tetap sama) --- */
+@media (max-width: 600px) {
+    #universal-input-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .universal-control {
+        width: 90%;
+        max-width: 300px;
+    }
+}

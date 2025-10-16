@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papan Skor Cerdas Cermat Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> 
+</head>
+<body>
+
+    <div class="container">
+        <h1>Smart Youth Competition</h1>
+
+        <div class="name-input-section">
+            <h2>Ganti Nama Tim</h2>
+            <div id="name-inputs" class="team-control-grid">
+                </div>
+            <button onclick="saveTeamNames()">Simpan Nama Tim</button>
+        </div>
+        
+        <hr/>
+        
+        <div class="controls universal-controls-only">
+            <h2>Poin</h2>
+            <div id="universal-input-container">
+                </div>
+        </div>
+
+        <hr/>
+
+        <div id="scoreboard">
+            </div>
+        
+        <hr/>
+
+        <hr/>
+        
+        <div id="logo-section">
+            <img src="URL_LOGO_ANDA" alt="Logo Acara" id="main-logo">
+        </div>
+
+        <div class="global-actions">
+            <button onclick="resetScores()">Reset Poin Semua Tim</button>
+            <button class="download-btn" onclick="exportToExcel()">📥 Unduh Riwayat Score (.xlsx)</button>
+        </div>
+        
+        <hr/>
+        
+        <div class="history-section">
+            <h2>Riwayat Score</h2>
+            <ul id="score-history">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
