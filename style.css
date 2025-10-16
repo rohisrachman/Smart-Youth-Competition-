@@ -349,3 +349,23 @@ hr {
         max-width: 300px;
     }
 }
+
+#logo-section {
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+
+#main-logo {
+    /* Properti Kunci untuk Responsivitas: */
+    width: 100%; /* Membuat gambar menyesuaikan lebar container #logo-section */
+    max-width: 600px; /* Batas lebar maksimumnya (misalnya 600px) */
+    
+    height: auto; /* Memastikan rasio aspek gambar tidak terdistorsi */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#main-logo:hover {
+    transform: scale(1.05);
+}
