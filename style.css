@@ -358,7 +358,7 @@ hr {
 #main-logo {
     /* Properti Kunci untuk Responsivitas: */
     width: 100%; /* Membuat gambar menyesuaikan lebar container #logo-section */
-    max-width: 600px; /* Batas lebar maksimumnya (misalnya 600px) */
+    max-width: 400px; /* Batas lebar maksimumnya (misalnya 600px) */
     
     height: auto; /* Memastikan rasio aspek gambar tidak terdistorsi */
     border-radius: 8px;
